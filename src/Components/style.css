@@ -1,0 +1,263 @@
+/* Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda&family=Poppins:wght@300&display=swap');
+
+/* Mengatur padding dan margin menjadi nol untuk semua elemen, dan mengatur font keluarga */
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Mendefinisikan variabel warna global */
+:root{
+    --primary-color: hsl(44, 87%, 25%);
+    --secondary-color: hsl(34, 36%, 61%);
+}
+
+/* Mengatur warna latar belakang untuk body */
+body{
+    background-color: var(--primary-color);
+}
+
+/* Mengatur ukuran font untuk html */
+html{
+    font-size: 75.5%;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "header" */
+.header{
+    width: 100%;
+    height: 500px;
+    color: var(--secondary-color);
+    box-shadow: 0 5px 10px var(--secondary-color);
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Menambahkan elemen sebelum header untuk efek visual */
+.header::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(bg1.png);
+    clip-path: circle(60% at left 300px);
+    z-index: -1;
+}
+
+/* Mengatur posisi dan gaya untuk elemen dengan kelas "row2" */
+.row2{
+    position: absolute;
+    top: 10px;
+    right: 150px;
+    text-align: center;
+}
+
+/* Mengatur gaya untuk elemen h2 di dalam "row2" */
+.row2 h2{
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Mengatur gaya untuk gambar di dalam "row2" */
+.row2 img{
+    margin-top: 30px;
+    width: 250px;
+}
+
+/* Mengatur gaya untuk elemen h1 di dalam "row1" */
+.row1 h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-left: 35px;
+    font-family: 'Bodoni Moda', serif;
+}
+
+/* Mengatur tampilan untuk elemen dengan kelas "search" */
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mengatur gaya untuk input dalam "search" */
+.search input{
+    outline: 0;
+    border: 0;
+    width: 350px;
+    height: 35px;
+    padding: 0 0.5rem;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/* Mengatur gaya untuk tombol dalam "search" */
+.search button{
+    outline: none;
+    border: none;
+    height: 35px;
+    padding: 0 0.5rem;
+}
+
+/* Mengatur tampilan untuk elemen dengan kelas "container" */
+.container{
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+    grid-gap: 20px;
+    box-sizing: border-box;
+}
+
+/* Mengatur tampilan untuk elemen dengan kelas "card" */
+.card{
+    background-color: var(--secondary-color);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 5px rgba(212,185,150, 0.5);
+    transition: 0.5s;
+    text-align: center;
+    position: relative;
+}
+
+/* Mengatur efek hover untuk elemen dengan kelas "card" */
+.card:hover{
+    transform: scale(0.9);
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Mengatur gaya untuk gambar dalam "card" */
+.card img{
+    width: 100%;
+    height: 200px;
+    border-radius: 1rem 1rem 0 0;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "bottom" dalam "card" */
+.card .bottom{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "title" dalam "bottom" */
+.card .bottom .title{
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "amount" dalam "bottom" */
+.card .bottom .amount{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 13px;
+    font-weight: bold;
+    padding: 0.2rem;
+}
+
+/* Mengatur tampilan untuk elemen dengan kelas "overlay" */
+.overlay{
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "overlay-inner" */
+.overlay-inner{
+    background: white;
+    width: 700px;
+    height: 550px;
+    padding: 1.5rem;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-size: 1.3rem;
+}
+
+/* Mengatur gaya untuk tombol "close" dalam "overlay-inner" */
+.overlay-inner .close{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "inner-box" dalam "overlay-inner" */
+.overlay-inner .inner-box{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mengatur gaya untuk gambar dalam "inner-box" */
+.overlay-inner .inner-box img{
+    margin-right: 20px;
+    width: 150px;
+    height: 200px;
+}
+
+/* Mengatur gaya untuk elemen h3 dalam "inner-box" */
+.overlay-inner .inner-box h3{
+    margin-top: 10px;
+    color: green;
+}
+
+/* Mengatur gaya untuk elemen h4 dalam "inner-box" */
+.overlay-inner .inner-box h4{
+    color: blue;
+}
+
+/* Mengatur gaya untuk tombol dalam "inner-box" */
+.overlay-inner .inner-box button{
+    outline: none;
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #24a0ed;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+}
+
+/* Mengatur gaya untuk elemen dengan kelas "description" dalam "overlay-inner" */
+.overlay-inner .description{
+    margin-top: 2rem;
+    text-align: justify;
+    font-size: 13px;
+}
+
+/*
+Hubungan dengan file lain:
+1. File main.js: Menggunakan kelas .header, .row1, .row2, .search, dan .container untuk mengatur tampilan elemen-elemen tersebut di halaman utama.
+2. File card.js: Menggunakan kelas .card, .bottom, .title, dan .amount untuk mengatur tampilan kartu buku.
+3. File modal.js: Menggunakan kelas .overlay, .overlay-inner, .close, .inner-box, .description, dan elemen terkait untuk mengatur tampilan modal yang muncul ketika kartu buku diklik.
+    CSS ini memberikan gaya visual untuk elemen-elemen yang digunakan dalam komponen React di file main.js, card.js, dan modal.js. Ini mencakup pengaturan warna, tata letak, dan efek visual lainnya yang membuat aplikasi terlihat menarik dan mudah digunakan.
+
+
+
+
+
+
+
+
+*/

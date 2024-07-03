@@ -1,0 +1,12 @@
+body {
+  margin: 0; /* Menghilangkan margin default dari elemen body */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif; 
+  /* Mengatur jenis huruf default untuk elemen body dengan beberapa fallback font */
+  -webkit-font-smoothing: antialiased; /* Menghaluskan tampilan font pada browser berbasis WebKit */
+  -moz-osx-font-smoothing: grayscale; /* Menghaluskan tampilan font pada sistem operasi macOS */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; 
+  /* Mengatur jenis huruf untuk elemen code dengan font khusus untuk kode */
+}
